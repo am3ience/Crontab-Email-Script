@@ -1,14 +1,16 @@
 #!/bin/bash
 #
+#  PROGRAM: Email.sh - Email Crontab program
+#
+#  DATE: October 6, 2016
 #
 #
 #
+#  DESIGNERS/PROGRAMMERS: Paul Cabanez
+#                         Justin Chau
 #
-#
-#
-#
-#
-#
+#  NOTES: This Program prompts the user for date and time and destination email
+#         it also asks for an attachent or not. Created an email script and Crontab entry.
 
 echo -e "What month do you want to send the email on?\n(1-12) Jan = 1, Dec = 12 or enter * for every month: "
 read month
@@ -25,7 +27,7 @@ read hour
 echo -e "What minute of that hour do you want to send it on?\n(0-59) or * for every minute: "
 read minute
 
-echo -e "_____________________\n"
+echo -e "_____________________\n"   # Line break to break betwee date/time prompts, to email prompts 
 
 
 echo "Enter the email you want to send to: "
