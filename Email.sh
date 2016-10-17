@@ -27,7 +27,7 @@ read hour
 echo -e "What minute of that hour do you want to send it on?\n(0-59) or * for every minute: "
 read minute
 
-echo -e "_____________________\n"   # Line break to break betwee date/time prompts, to email prompts 
+echo -e "_____________________\n"   # Line break to break betwee date/time prompts, to email prompts
 
 
 echo "Enter the email you want to send to: "
@@ -46,10 +46,10 @@ if ( [[ $attach == 'y' ]] || [[ $attach == 'Y' ]] );
 then
   echo -e "Enter the full file path of the file you want to send:\nex.) /user/Home/test.txt"
   read file
-  echo "mail -s $subj -a $file $destEmail <<< $body" > /root/Documents/Email2.sh   # creats an Email2 script that mails the email with the user's preferences
+  echo "mail -s '$subj' -a $file $destEmail <<< '$body'" > /root/Documents/Email2.sh   # creats an Email2 script that mails the email with the user's preferences
   chmod 777 "/root/Documents/Email2.sh"                                            # add permissions for execution
 else
-  echo "mail -s $subj $destEmail <<< $body" > /root/Documents/Email2.sh            # creates the script without an attachment
+  echo "mail -s '$subj' $destEmail <<< '$body'" > /root/Documents/Email2.sh            # creates the script without an attachment
   chmod 777 "/root/Documents/Email2.sh"                                            # add permissions for execution
 fi
 
